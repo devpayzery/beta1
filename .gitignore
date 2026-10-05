@@ -1,0 +1,23 @@
+# v0 sandbox internal files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+.vercel/
+
+# Environment variables
+# AUDIT FIX: the previous entry was only `.env*.local`, which does NOT match a
+# plain `.env` or `.env.production`. A committed `.env` would leak
+# GAME_SERVER_PRIVATE_KEY and SUPABASE_SERVICE_ROLE_KEY. .env.example is still
+# tracked deliberately, so it is re-included after the rule below.
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Common ignores
+node_modules
+.next/
+.DS_Store
+.vercel
